@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css';
 import styled from 'styled-components'
 import {people} from './data/data'
-import {arraySearchProduct} from './utils'
+import {arraySearch} from './utils'
 
 function App() {
   const [population, setPopulation] = useState(people)
@@ -11,7 +11,7 @@ function App() {
     let value = e.target.value;
     if (value.length > 2) {
       
-      let search = await arraySearchProduct(population, value);
+      let search = await arraySearch(population, value);
       console.log('search ', search)
       setPopulation(search)
     } else {
