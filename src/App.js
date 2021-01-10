@@ -6,23 +6,26 @@ import {arraySearch} from './utils'
 
 function App() {
   const [population, setPopulation] = useState(people)
+  const [count, setCount] = useState(people.length)
 
   const handleOnChange = async (e) => {
     let value = e.target.value;
     if (value.length > 2) {
-      
       let search = await arraySearch(population, value);
-      console.log('search ', search)
       setPopulation(search)
+      setCount(search.length)
     } else {
       setPopulation(people)
+      setCount(people.length)
     }
-    
-}
+  }
 
   return (
     <div className="App">
+      <div>Count: {count}
       <Search type="text" name="search" id="search" placeholder="Search Filter" onChange={handleOnChange}/>
+      </div>
+      
       <Container name="container">
         {population.map(person => (
         <Card key={person.guid}>
