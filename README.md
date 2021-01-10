@@ -5,7 +5,9 @@ To run locally, clone this repository.
 Then run npm install and npm run start.
 
 Read the blog post at - 
+
 [How to Search an Array of Objects in JavaScript (React)](https://learningtofly.dev/blog/how-to-search-an-array-of-objects-in-javascript-react)
+
 # How to Search an Array of Objects in JavaScript (React)
 
 Before we dive in, I wanted to let you know that I'm writing this post for me, for future me.  I was tasked with creating the search functionality, for a client, and they wanted to be able to search across multiple tabs and categories and have the resutls update in real time.  I spent a lot of time figuring this out where everything worked across tabs and categories but what I'm presenting here is the meat of the functionality.  If you've stumbled on to this post, I hope it saves you some time.
@@ -82,7 +84,7 @@ const handleOnChange = async (e) => {
 
 Let's see it in action, one thing to notice is the Counter just above the Search input, as the user types the counter will update with the number of elements.  As you'll notice in the video, when I search for 'male' the count stays at 50.  The reason for that is the match function is searching for the existence of the string but not the whole word.  When I search for 'female' the count changes to 21.  Pay attention to the Count as I do the different searches.
 
- [![React Search](./public/react-search-thumbnail.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "React Search")
+ [![React Search](./public/react-search-thumbnail.jpg)](https://www.youtube.com/watch?v=L0mDuusnY5c&feature=youtu.be)
 
  
 Thanks for reading and I hope that you found this easy to understand and clear. 
